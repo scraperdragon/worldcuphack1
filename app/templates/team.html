@@ -1,0 +1,14 @@
+<html>
+<body>
+{% block content %}
+<h1>FIFA's Team of the Tournament for World Cup 2010</h1>
+{% for t in team %}
+	<h2>{{t}}</h2>
+	{% for q in team[t] %}
+		<p>{{q.player_name}} ({{q.count}} Events)</p>
+	{% endfor %}
+{% endfor %}
+{% endblock %}
+</body>
+</html>
+
